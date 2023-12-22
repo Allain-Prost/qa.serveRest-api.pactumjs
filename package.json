@@ -1,5 +1,4 @@
 {
-  "type": "module",
   "devDependencies": {
     "@faker-js/faker": "^8.3.1",
     "mocha": "^10.2.0",
@@ -9,6 +8,7 @@
     "test": "mocha tests/functional/shouldRegisterACustomerTypeUser.test.js"
   },
   "dependencies": {
+    "chai": "^4.3.10",
     "dotenv": "^16.3.1"
   }
 }
