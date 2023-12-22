@@ -1,6 +1,6 @@
 import { specPactumJs } from "../../constants";
 
-export default async function postUsuarios(nome, email, password, administrador) {
+export default async function postUsuarios({nome, email, password, administrador}) {
   await specPactumJs()
     .post(`${process.env.BASE_URL}/usuarios`)
     .withBody({
