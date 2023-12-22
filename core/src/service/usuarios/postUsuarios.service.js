@@ -1,7 +1,7 @@
-import { specPactumJs } from "../../constants";
+const { specPactumJs } = require("../../../../constants");
 
-export default async function postUsuarios({nome, email, password, administrador}) {
-  await specPactumJs()
+async function postUsuarios({ nome, email, password, administrador }) {
+  return await specPactumJs()
     .post(`${process.env.BASE_URL}/usuarios`)
     .withBody({
       nome: nome,
@@ -9,5 +9,9 @@ export default async function postUsuarios({nome, email, password, administrador
       password: password,
       administrador: administrador,
     })
-    .expectStatus(201)
+    .expectStatus(201);
 }
+
+module.exports = {
+  postUsuarios
+};
