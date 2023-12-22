@@ -4,6 +4,9 @@
     "pactum": "^3.5.1"
   },
   "scripts": {
-    "test": "mocha tests/initial.test.js"
+    "test": "mocha tests/functional/shouldRegisterACustomerTypeUser.test.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
   }
 }
