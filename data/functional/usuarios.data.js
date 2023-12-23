@@ -14,7 +14,13 @@ const TC02 = {
   message: 'Registro excluído com sucesso'
 };
 
+const TC03 = {
+  ...TC01,
+  email: faker.internet.email()
+};
+
 module.exports = {
   TC01,
-  TC02
+  TC02,
+  TC03
 }
