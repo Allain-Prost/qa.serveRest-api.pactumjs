@@ -29,9 +29,27 @@ const TC04 = {
   message: 'Registro alterado com sucesso'
 };
 
+const TC06 = {
+  name: faker.person.firstName(),
+  newName: faker.person.firstName(),
+  email: faker.internet.email(),
+  newEmail: faker.internet.email(),
+  password: faker.internet.password(),
+  administrador: 'true',
+  message: 'Este email já está sendo usado'
+};
+
+const TC07 = {
+  ...TC01,
+  email: faker.internet.email(),
+  password: '',
+  message: 'password não pode ficar em branco'
+}
+
 module.exports = {
   TC01,
   TC02,
   TC03,
-  TC04
+  TC04,
+  TC06, TC07
 }
