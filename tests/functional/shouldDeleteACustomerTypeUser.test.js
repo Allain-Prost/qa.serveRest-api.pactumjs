@@ -1,7 +1,7 @@
-const { assert } = require("chai")
 const { postUsuarios } = require("../../core/src/service/usuarios/postUsuarios.service.js")
 const { TC02 } = require("../../data/functional/usuarios.data.js")
 const { deleteUsuario } = require("../../core/src/service/usuarios/deleteUsuarios.service.js")
+const { assert } = require("../../constants.js")
 
 describe("Usuário - POST", () => {
 

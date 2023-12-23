@@ -1,4 +1,4 @@
-const { assert, expect } = require("chai")
+const { assert, expect } = require("../../constants.js")
 const { postUsuarios } = require("../../core/src/service/usuarios/postUsuarios.service.js")
 const { TC01 } = require("../../data/functional/usuarios.data.js")
 
