@@ -5,7 +5,9 @@
     "pactum": "^3.5.1"
   },
   "scripts": {
-    "test": "mocha tests/functional/shouldRegisterACustomerTypeUser.test.js"
+    "testParallel": "mocha tests/functional/**.test.js --parallel=true --timeout=900000",
+    "testNoParallel": "mocha tests/functional/**.test.js --parallel=false --timeout=900000",
+    "unitTest": "mocha tests/functional/shouldSearchAllACustomerTypeUser.test.js --timeout=900000"
   },
   "dependencies": {
     "chai": "^4.3.10",
