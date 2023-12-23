@@ -8,6 +8,13 @@ const TC01 = {
   message: 'Cadastro realizado com sucesso'
 };
 
+const TC02 = {
+  ...TC01,
+  email: faker.internet.email(),
+  message: 'Registro excluído com sucesso'
+};
+
 module.exports = {
-  TC01
+  TC01,
+  TC02
 }
