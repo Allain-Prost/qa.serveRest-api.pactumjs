@@ -19,8 +19,19 @@ const TC03 = {
   email: faker.internet.email()
 };
 
+const TC04 = {
+  name: faker.person.firstName(),
+  newName: faker.person.firstName(),
+  email: faker.internet.email(),
+  newEmail: faker.internet.email(),
+  password: faker.internet.password(),
+  administrador: 'true',
+  message: 'Registro alterado com sucesso'
+};
+
 module.exports = {
   TC01,
   TC02,
-  TC03
+  TC03,
+  TC04
 }
