@@ -32,6 +32,22 @@ const TC033 = {
   message: 'Cadastro realizado com sucesso'
 };
 
+const TC034 = {
+  name: faker.person.firstName(),
+  email: faker.internet.email(),
+  password: faker.internet.password(),
+  administrador: 'false',
+  message: 'Cadastro realizado com sucesso'
+};
+
+const TC035 = {
+  name: faker.person.firstName(),
+  email: faker.internet.email(),
+  password: faker.internet.password(),
+  administrador: 'false',
+  message: 'Cadastro realizado com sucesso'
+};
+
 const TC04 = {
   name: faker.person.firstName(),
   newName: faker.person.firstName(),
@@ -90,7 +106,7 @@ const TC10 = {
 module.exports = {
   TC01,
   TC02,
-  TC032,
+  TC032, TC034, TC035,
   TC04, TC05,
   TC06, TC07, TC08, TC09, TC10, TC033
 }
