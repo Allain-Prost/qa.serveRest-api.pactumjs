@@ -9,14 +9,27 @@ const TC01 = {
 };
 
 const TC02 = {
-  ...TC01,
+  name: faker.person.firstName(),
   email: faker.internet.email(),
+  password: faker.internet.password(),
+  administrador: 'true',
   message: 'Registro excluído com sucesso'
 };
 
-const TC03 = {
-  ...TC01,
-  email: faker.internet.email()
+const TC032 = {
+  name: faker.person.firstName(),
+  email: faker.internet.email(),
+  password: faker.internet.password(),
+  administrador: 'false',
+  message: 'Cadastro realizado com sucesso'
+};
+
+const TC033 = {
+  name: faker.person.firstName(),
+  email: faker.internet.email(),
+  password: faker.internet.password(),
+  administrador: 'false',
+  message: 'Cadastro realizado com sucesso'
 };
 
 const TC04 = {
@@ -25,8 +38,16 @@ const TC04 = {
   email: faker.internet.email(),
   newEmail: faker.internet.email(),
   password: faker.internet.password(),
-  administrador: 'true',
+  administrador: 'false',
   message: 'Registro alterado com sucesso'
+};
+
+const TC05 = {
+  name: faker.person.firstName(),
+  email: faker.internet.email(),
+  password: faker.internet.password(),
+  administrador: 'true',
+  message: 'Cadastro realizado com sucesso'
 };
 
 const TC06 = {
@@ -69,7 +90,7 @@ const TC10 = {
 module.exports = {
   TC01,
   TC02,
-  TC03,
-  TC04,
-  TC06, TC07, TC08, TC09, TC10
+  TC032,
+  TC04, TC05,
+  TC06, TC07, TC08, TC09, TC10, TC033
 }

@@ -2,15 +2,21 @@
   "devDependencies": {
     "@faker-js/faker": "^8.3.1",
     "mocha": "^10.2.0",
+    "mocha-junit-reporter": "^2.2.1",
     "pactum": "^3.5.1"
   },
   "scripts": {
-    "testParallel": "mocha tests/functional/**.test.js --parallel=true --timeout=900000",
-    "testNoParallel": "mocha tests/functional/**.test.js --parallel=false --timeout=900000",
-    "unitTest": "mocha tests/functional/shouldSearchAllACustomerTypeUser.test.js --timeout=900000"
+    "testParallel": "mocha tests/functional/**.test.js --parallel=true --reporter mochawesome",
+    "testNoParallel": "mocha tests/functional/**.test.js --parallel=false --reporter mochawesome --timeout=900000",
+    "unitTest": "mocha tests/functional/**/deveRealizarLoginComAdministrador.test.js --reporter mochawesome --timeout=900000",
+    "unitTestReport": "mocha tests/functional/shouldRegisterAUserWithoutAdm.test.js --reporter mochawesome",
+    "testLogin": "mocha tests/functional/login/**.test.js --reporter mochawesome --timeout=900000",
+    "testUsuarios": "mocha tests/functional/usuario/buscarUsuarios/**.test.js --reporter mochawesome --timeout=900000"
   },
   "dependencies": {
     "chai": "^4.3.10",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "mochawesome": "^7.1.3",
+    "test-results-reporter": "^1.1.0"
   }
 }

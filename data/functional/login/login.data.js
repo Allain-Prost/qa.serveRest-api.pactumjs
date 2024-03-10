@@ -16,6 +16,21 @@ const TC12 ={
     messageLogin: 'Email e/ou senha inválidos'
 }
 
+const TC13 = {
+    ...TC11,
+    name: faker.person.firstName(),
+    email: faker.internet.email(),
+    password: faker.internet.password(),
+    administrador: 'false'
+}
+
+const TC14 = {
+    ...TC13,
+    email: faker.internet.email(),
+    password: 'invalido',
+    messageLogin: 'Email e/ou senha inválidos'
+}
+
 module.exports = {
-    TC11, TC12
+    TC11, TC12, TC13, TC14
 }

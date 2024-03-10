@@ -1,10 +1,11 @@
-const { assert, expect } = require("../../constants.js")
-const { postUsuarios } = require("../../core/src/service/usuarios/postUsuarios.service.js")
-const { TC01 } = require("../../data/functional/usuarios.data.js")
+
+const { assert, expect } = require("../../../../constants.js")
+const { postUsuarios } = require("../../../../core/src/service/usuarios/postUsuarios.service.js")
+const { TC01 } = require("../../../../data/functional/usuarios.data.js")
 
 describe("Usuário - POST", () => {
 
-  it("[TC-01] - Should register a customer type user", async () => {
+  it("[TC-01] - Deve validar o cadastro de um usuário do tipo Adm", async () => {
     let { json } = await postUsuarios({nome: TC01.name, email: TC01.email, password: TC01.password, administrador: TC01.administrador})
     assert.equal(json.message, TC01.message, 'A mensagem é diferente do esperado')
     expect(json).to.have.property('_id')
