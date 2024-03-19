@@ -102,8 +102,17 @@ const TC050 = {
   password: faker.internet.password(),
   administrador: 'false',
   message: 'Registro alterado com sucesso'
-};
+}
+
+const TC051 = {
+  name: faker.person.firstName(),
+  email: faker.internet.email(),
+  newEmail: faker.internet.email(),
+  password: faker.internet.password(),
+  administrador: 'false',
+  message: 'Registro alterado com sucesso'
+}
 
 module.exports = {
-  TC01, TC02, TC03, TC04, TC05, TC06, TC07, TC020, TC021, TC022, TC023, TC040, TC041, TC050
+  TC01, TC02, TC03, TC04, TC05, TC06, TC07, TC020, TC021, TC022, TC023, TC040, TC041, TC050, TC051
 }
