@@ -13,60 +13,10 @@ const TC02 = {
   email: faker.internet.email(),
   password: faker.internet.password(),
   administrador: 'true',
-  message: 'Registro excluído com sucesso'
-};
-
-const TC032 = {
-  name: faker.person.firstName(),
-  email: faker.internet.email(),
-  password: faker.internet.password(),
-  administrador: 'false',
   message: 'Cadastro realizado com sucesso'
 };
 
-const TC033 = {
-  name: faker.person.firstName(),
-  email: faker.internet.email(),
-  password: faker.internet.password(),
-  administrador: 'false',
-  message: 'Cadastro realizado com sucesso'
-};
-
-const TC034 = {
-  name: faker.person.firstName(),
-  email: faker.internet.email(),
-  password: faker.internet.password(),
-  administrador: 'false',
-  message: 'Cadastro realizado com sucesso'
-};
-
-const TC035 = {
-  name: faker.person.firstName(),
-  email: faker.internet.email(),
-  password: faker.internet.password(),
-  administrador: 'false',
-  message: 'Cadastro realizado com sucesso'
-};
-
-const TC04 = {
-  name: faker.person.firstName(),
-  newName: faker.person.firstName(),
-  email: faker.internet.email(),
-  newEmail: faker.internet.email(),
-  password: faker.internet.password(),
-  administrador: 'false',
-  message: 'Registro alterado com sucesso'
-};
-
-const TC05 = {
-  name: faker.person.firstName(),
-  email: faker.internet.email(),
-  password: faker.internet.password(),
-  administrador: 'true',
-  message: 'Cadastro realizado com sucesso'
-};
-
-const TC06 = {
+const TC03 = {
   name: faker.person.firstName(),
   newName: faker.person.firstName(),
   email: faker.internet.email(),
@@ -76,37 +26,84 @@ const TC06 = {
   message: 'Este email já está sendo usado'
 };
 
-const TC07 = {
-  ...TC01,
-  email: faker.internet.email(),
-  password: '',
-  message: 'password não pode ficar em branco'
-};
-
-const TC08 = {
+const TC04 = {
   ...TC01,
   name: '',
   email: faker.internet.email(),
   message: 'nome não pode ficar em branco'
 }
 
-const TC09 = {
+const TC05 = {
+  ...TC01,
+  email: faker.internet.email(),
+  password: '',
+  message: 'password não pode ficar em branco'
+}
+
+const TC06 = {
   ...TC01,
   email: '',
   message: 'email não pode ficar em branco'
 }
 
-const TC10 = {
+const TC07 = {
   ...TC01,
   email: faker.internet.email(),
   message: `administrador deve ser 'true' ou 'false'`,
   administrador: ''
 }
 
+const TC020 = {
+  name: faker.person.firstName(),
+  email: faker.internet.email(),
+  password: faker.internet.password(),
+  administrador: 'false'
+}
+
+const TC021 = {
+  name: faker.person.firstName(),
+  email: faker.internet.email(),
+  password: faker.internet.password(),
+  administrador: 'false'
+}
+
+const TC022 = {
+  name: faker.person.firstName(),
+  email: faker.internet.email(),
+  password: faker.internet.password(),
+  administrador: 'false'
+}
+
+const TC023 = {
+  name: faker.person.firstName(),
+  email: faker.internet.email(),
+  password: faker.internet.password(),
+  administrador: 'false'
+}
+
+const TC040 = {
+  name: faker.person.firstName(),
+  email: faker.internet.email(),
+  password: faker.internet.password(),
+  administrador: 'true',
+  message: 'Registro excluído com sucesso'
+}
+
+const TC041 = {
+  id: '3HEOjYU6FAAAAAW2i0YJ',
+  message: 'Nenhum registro excluído'
+};
+
+const TC050 = {
+  name: faker.person.firstName(),
+  newName: faker.person.firstName(),
+  email: faker.internet.email(),
+  newEmail: faker.internet.email(),
+  password: faker.internet.password(),
+  administrador: 'false',
+  message: 'Registro alterado com sucesso'
+};
+
 module.exports = {
-  TC01,
-  TC02,
-  TC032, TC034, TC035,
-  TC04, TC05,
-  TC06, TC07, TC08, TC09, TC10, TC033
+  TC01, TC02, TC03, TC04, TC05, TC06, TC07, TC020, TC021, TC022, TC023, TC040, TC041, TC050
 }

@@ -1,11 +1,11 @@
 const { postUsuarios } = require("../../../../core/src/service/usuarios/postUsuarios.service.js")
-const { TC10 } = require("../../../../data/functional/usuarios.data.js")
+const { TC07 } = require("../../../../data/usuarios/usuarios.data.js")
 const { assert } = require("../../../../constants.js")
 
 describe("Usuário - POST", () => {
 
-  it("[TC-10] - Deve registrar um usuário sem o atributo Administrador", async () => {
-    let { json } = await postUsuarios({nome: TC10.name, email: TC10.email, password: TC10.password, administrador: TC10.administrador, statusCodeResponse: 400})
-    assert.equal(json.administrador, TC10.message, 'A mensagem é diferente do esperado')
+  it("[TC-07] - Deve validar o registro um usuário sem o atributo Administrador", async () => {
+    let { json } = await postUsuarios({nome: TC07.name, email: TC07.email, password: TC07.password, administrador: TC07.administrador, statusCodeResponse: 400})
+    assert.equal(json.administrador, TC07.message, 'A mensagem é diferente do esperado')
   })
 })

@@ -6,9 +6,9 @@
     "pactum": "^3.5.1"
   },
   "scripts": {
-    "testParallel": "mocha tests/functional/**.test.js --parallel=true --reporter mochawesome",
+    "testParallel": "mocha tests/functional/**/**.test.js --parallel=true --reporter mochawesome",
     "testNoParallel": "mocha tests/functional/**.test.js --parallel=false --reporter mochawesome --timeout=900000",
-    "unitTest": "mocha tests/functional/**/deveRealizarLoginComAdministrador.test.js --reporter mochawesome --timeout=900000",
+    "unitTest": "mocha tests/functional/**/deveExcluirUmUsuarioComIdInexistente.test.js --reporter mochawesome --timeout=900000",
     "unitTestReport": "mocha tests/functional/shouldRegisterAUserWithoutAdm.test.js --reporter mochawesome",
     "testLogin": "mocha tests/functional/login/**.test.js --reporter mochawesome --timeout=900000",
     "testUsuarios": "mocha tests/functional/usuario/buscarUsuarios/**.test.js --reporter mochawesome --timeout=900000"

@@ -1,6 +1,6 @@
 const { faker } = require("@faker-js/faker");
 
-const TC11 = {
+const TC060 = {
     name: faker.person.firstName(),
     email: faker.internet.email(),
     password: faker.internet.password(),
@@ -9,28 +9,28 @@ const TC11 = {
     messageLogin: 'Login realizado com sucesso'
 }
 
-const TC12 ={
-    ...TC11,
+const TC061 ={
+    ...TC060,
     email: faker.internet.email(),
     password: 'invalido',
     messageLogin: 'Email e/ou senha inválidos'
 }
 
-const TC13 = {
-    ...TC11,
+const TC062 = {
+    ...TC060,
     name: faker.person.firstName(),
     email: faker.internet.email(),
     password: faker.internet.password(),
     administrador: 'false'
 }
 
-const TC14 = {
-    ...TC13,
+const TC063 = {
+    ...TC062,
     email: faker.internet.email(),
     password: 'invalido',
     messageLogin: 'Email e/ou senha inválidos'
 }
 
 module.exports = {
-    TC11, TC12, TC13, TC14
+    TC060, TC061, TC062, TC063
 }
