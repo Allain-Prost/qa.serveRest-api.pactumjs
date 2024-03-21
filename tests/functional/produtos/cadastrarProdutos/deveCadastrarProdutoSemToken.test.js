@@ -1,5 +1,4 @@
-const { assert, expect } = require("../../../../constants")
-const { postLogin } = require("../../../../core/src/service/login/postLogin.service")
+const { assert } = require("../../../../constants")
 const { postProdutos } = require("../../../../core/src/service/produtos/postProdutos.service")
 const { postUsuarios } = require("../../../../core/src/service/usuarios/postUsuarios.service")
 const { TC072 } = require("../../../../data/produtos/produtos.data")

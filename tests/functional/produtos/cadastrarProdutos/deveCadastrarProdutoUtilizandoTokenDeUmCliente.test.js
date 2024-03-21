@@ -1,4 +1,4 @@
-const { assert, expect } = require("../../../../constants")
+const { assert } = require("../../../../constants")
 const { postLogin } = require("../../../../core/src/service/login/postLogin.service")
 const { postProdutos } = require("../../../../core/src/service/produtos/postProdutos.service")
 const { postUsuarios } = require("../../../../core/src/service/usuarios/postUsuarios.service")
