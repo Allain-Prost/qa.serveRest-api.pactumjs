@@ -8,7 +8,7 @@ const TC070 = {
     administrador: 'true',
 	},
 	produto: {
-		nome: faker.commerce.product(),
+		nome: `${faker.commerce.product()}${faker.number.int({ max: 1000 })}`,
 		preco: faker.commerce.price({ max: 1000 }),
 		descricao: faker.commerce.productDescription(),
 		quantidade: faker.number.int({ max: 1000 })
@@ -26,7 +26,7 @@ const TC071 = {
     administrador: 'true',
 	},
 	produto: {
-		nomeRepetido: faker.commerce.product(),
+		nomeRepetido: `${faker.commerce.product()}${faker.number.int({ max: 1000 })}`,
 		preco: faker.commerce.price({ max: 1000 }),
 		descricao: faker.commerce.productDescription(),
 		quantidade: faker.number.int({ max: 1000 })
@@ -73,6 +73,60 @@ const TC073 = {
 	}
 }
 
+const TC081 = {
+	usuario: {
+		name: faker.person.firstName(),
+    email: faker.internet.email(),
+    password: faker.internet.password(),
+    administrador: 'true',
+	},
+	produto: {
+		nome: `${faker.commerce.product()}${faker.number.int({ max: 1000 })}`,
+		preco: faker.commerce.price({ max: 1000 }),
+		descricao: faker.commerce.productDescription(),
+		quantidade: faker.number.int({ max: 1000 })
+	},
+	cadastroProduto: {
+		message: ''
+	}
+}
+
+const TC082 = {
+	usuario: {
+		name: faker.person.firstName(),
+    email: faker.internet.email(),
+    password: faker.internet.password(),
+    administrador: 'true',
+	},
+	produto: {
+		nome: `${faker.commerce.product()}${faker.number.int({ max: 1000 })}`,
+		preco: faker.commerce.price({ max: 1000 }),
+		descricao: faker.commerce.productDescription(),
+		quantidade: faker.number.int({ max: 1000 })
+	},
+	cadastroProduto: {
+		message: ''
+	}
+}
+
+const TC080 = {
+	usuario: {
+		name: faker.person.firstName(),
+    email: faker.internet.email(),
+    password: faker.internet.password(),
+    administrador: 'true',
+	},
+	produto: {
+		nome: `${faker.commerce.product()}${faker.number.int({ max: 1000 })}`,
+		preco: faker.commerce.price({ max: 1000 }),
+		descricao: faker.commerce.productDescription(),
+		quantidade: faker.number.int({ max: 1000 })
+	},
+	cadastroProduto: {
+		message: ''
+	}
+}
+
 module.exports = {
-	TC070, TC071, TC072, TC073
+	TC070, TC071, TC072, TC073, TC081, TC082, TC080
 }
