@@ -127,6 +127,24 @@ const TC080 = {
 	}
 }
 
+const TC083 = {
+	usuario: {
+		name: faker.person.firstName(),
+    email: faker.internet.email(),
+    password: faker.internet.password(),
+    administrador: 'true',
+	},
+	produto: {
+		nome: `${faker.commerce.product()}${faker.number.int({ max: 1000 })}`,
+		preco: faker.commerce.price({ max: 1000 }),
+		descricao: faker.commerce.productDescription(),
+		quantidade: faker.number.int({ max: 1000 })
+	},
+	cadastroProduto: {
+		message: ''
+	}
+}
+
 module.exports = {
-	TC070, TC071, TC072, TC073, TC081, TC082, TC080
+	TC070, TC071, TC072, TC073, TC080, TC081, TC082, TC083
 }
