@@ -16,7 +16,6 @@ describe(`Produtos - DELETE`, () => {
 
   it(`[TC-094] - Deve validar a exclusão de um produto com token de um cliente`, async () => {
     let deletarProduto = await deleteProdutosById(login.json.authorization, novoProduto.json._id, 403)
-    console.log(deletarProduto.json)
     assert.equal(deletarProduto.json.message, TC094.messagem, 'A mensagem é diferente do esperado.')
   })
 })
