@@ -8,14 +8,13 @@ const { TC080 } = require("../../../../data/produtos/produtos.data")
 describe(`Produtos - GET`, () => {
 
   let login
-  before(`Deve realizar o cadastro de um produto`, async () => {
+  before(`Deve realizar o cadastro de um adm, fazer o login e cadastrar um produto`, async () => {
     await postUsuarios({ nome: TC080.usuario.name, email: TC080.usuario.email, password: TC080.usuario.password, administrador: TC080.usuario.administrador })
     login = await postLogin({ email: TC080.usuario.email, password: TC080.usuario.password })
     await postProdutos(login.json.authorization, TC080.produto.nome, TC080.produto.preco, TC080.produto.descricao, TC080.produto.quantidade)
-  
   })
 
-  it(`[TC-080] - Deve buscar o produto através do preço`, async () => {
+  it(`[TC-080] - Deve validar a busca de um produto através do preço`, async () => {
     let buscarProduto = await getProdutos({preco: TC080.produto.preco})
     buscarProduto = buscarProduto.json.produtos[0]
     assert.equal(buscarProduto.nome, TC080.produto.nome, 'O nome do produto é diferente do esperado')
