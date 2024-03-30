@@ -14,7 +14,7 @@ describe(`Produtos - PUT`, () => {
     novoProduto = await postProdutos(login.json.authorization, TC100.produto.nome, TC100.produto.preco, TC100.produto.descricao, TC100.produto.quantidade)
   })
 
-  it(`[TC-100] - Deve validar a edição do nome de um produto através do id;`, async () => {
+  it(`[TC-100] - Deve validar a edição de um produto através do id;`, async () => {
     let editarNomeDoProduto = await putProdutos(login.json.authorization, novoProduto.json._id, TC100.editarProduto)
     assert.equal(deletarProduto.json.message, TC100.messagem, 'A mensagem é diferente do esperado.')
   })
