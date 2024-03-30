@@ -3,9 +3,9 @@ const { faker } = require("@faker-js/faker");
 const TC070 = {
 	usuario: {
 		name: faker.person.firstName(),
-    email: faker.internet.email(),
-    password: faker.internet.password(),
-    administrador: 'true',
+		email: faker.internet.email(),
+		password: faker.internet.password(),
+		administrador: 'true',
 	},
 	produto: {
 		nome: `${faker.commerce.product()}${faker.number.int({ max: 1000 })}`,
@@ -21,9 +21,9 @@ const TC070 = {
 const TC071 = {
 	usuario: {
 		name: faker.person.firstName(),
-    email: faker.internet.email(),
-    password: faker.internet.password(),
-    administrador: 'true',
+		email: faker.internet.email(),
+		password: faker.internet.password(),
+		administrador: 'true',
 	},
 	produto: {
 		nomeRepetido: `${faker.commerce.product()}${faker.number.int({ max: 1000 })}`,
@@ -39,9 +39,9 @@ const TC071 = {
 const TC072 = {
 	usuario: {
 		name: faker.person.firstName(),
-    email: faker.internet.email(),
-    password: faker.internet.password(),
-    administrador: 'true',
+		email: faker.internet.email(),
+		password: faker.internet.password(),
+		administrador: 'true',
 	},
 	produto: {
 		nomeRepetido: faker.commerce.product(),
@@ -58,9 +58,9 @@ const TC072 = {
 const TC073 = {
 	usuario: {
 		name: faker.person.firstName(),
-    email: faker.internet.email(),
-    password: faker.internet.password(),
-    administrador: 'false',
+		email: faker.internet.email(),
+		password: faker.internet.password(),
+		administrador: 'false',
 	},
 	produto: {
 		nomeRepetido: faker.commerce.product(),
@@ -76,9 +76,9 @@ const TC073 = {
 const TC081 = {
 	usuario: {
 		name: faker.person.firstName(),
-    email: faker.internet.email(),
-    password: faker.internet.password(),
-    administrador: 'true',
+		email: faker.internet.email(),
+		password: faker.internet.password(),
+		administrador: 'true',
 	},
 	produto: {
 		nome: `${faker.commerce.product()}${faker.number.int({ max: 1000 })}`,
@@ -94,9 +94,9 @@ const TC081 = {
 const TC082 = {
 	usuario: {
 		name: faker.person.firstName(),
-    email: faker.internet.email(),
-    password: faker.internet.password(),
-    administrador: 'true',
+		email: faker.internet.email(),
+		password: faker.internet.password(),
+		administrador: 'true',
 	},
 	produto: {
 		nome: `${faker.commerce.product()}${faker.number.int({ max: 1000 })}`,
@@ -112,9 +112,9 @@ const TC082 = {
 const TC080 = {
 	usuario: {
 		name: faker.person.firstName(),
-    email: faker.internet.email(),
-    password: faker.internet.password(),
-    administrador: 'true',
+		email: faker.internet.email(),
+		password: faker.internet.password(),
+		administrador: 'true',
 	},
 	produto: {
 		nome: `${faker.commerce.product()}${faker.number.int({ max: 1000 })}`,
@@ -127,9 +127,9 @@ const TC080 = {
 const TC083 = {
 	usuario: {
 		name: faker.person.firstName(),
-    email: faker.internet.email(),
-    password: faker.internet.password(),
-    administrador: 'true',
+		email: faker.internet.email(),
+		password: faker.internet.password(),
+		administrador: 'true',
 	},
 	produto: {
 		nome: `${faker.commerce.product()}${faker.number.int({ max: 1000 })}`,
@@ -142,9 +142,9 @@ const TC083 = {
 const TC090 = {
 	usuario: {
 		name: faker.person.firstName(),
-    email: faker.internet.email(),
-    password: faker.internet.password(),
-    administrador: 'true',
+		email: faker.internet.email(),
+		password: faker.internet.password(),
+		administrador: 'true',
 	},
 	produto: {
 		nome: `${faker.commerce.product()}${faker.number.int({ max: 1000 })}`,
@@ -158,9 +158,9 @@ const TC090 = {
 const TC091 = {
 	usuario: {
 		name: faker.person.firstName(),
-    email: faker.internet.email(),
-    password: faker.internet.password(),
-    administrador: 'true',
+		email: faker.internet.email(),
+		password: faker.internet.password(),
+		administrador: 'true',
 	},
 	idInexistente: 'idInexistente123',
 	messagem: 'Nenhum registro excluído'
@@ -169,9 +169,9 @@ const TC091 = {
 const TC092 = {
 	usuario: {
 		name: faker.person.firstName(),
-    email: faker.internet.email(),
-    password: faker.internet.password(),
-    administrador: 'true',
+		email: faker.internet.email(),
+		password: faker.internet.password(),
+		administrador: 'true',
 	},
 	produto: {
 		nome: `${faker.commerce.product()}${faker.number.int({ max: 1000 })}`,
@@ -186,9 +186,9 @@ const TC092 = {
 const TC093 = {
 	usuario: {
 		name: faker.person.firstName(),
-    email: faker.internet.email(),
-    password: faker.internet.password(),
-    administrador: 'true',
+		email: faker.internet.email(),
+		password: faker.internet.password(),
+		administrador: 'true',
 	},
 	produto: {
 		nome: `${faker.commerce.product()}${faker.number.int({ max: 1000 })}`,
@@ -203,9 +203,9 @@ const TC093 = {
 const TC094 = {
 	usuario: {
 		name: faker.person.firstName(),
-    email: faker.internet.email(),
-    password: faker.internet.password(),
-    administrador: 'false',
+		email: faker.internet.email(),
+		password: faker.internet.password(),
+		administrador: 'false',
 	},
 	produto: {
 		nome: `${faker.commerce.product()}${faker.number.int({ max: 1000 })}`,
@@ -216,6 +216,52 @@ const TC094 = {
 	messagem: 'Rota exclusiva para administradores'
 }
 
+const TC100 = {
+	usuario: {
+		name: faker.person.firstName(),
+		email: faker.internet.email(),
+		password: faker.internet.password(),
+		administrador: 'true',
+	},
+	produto: {
+		nome: `${faker.commerce.product()}${faker.number.int({ max: 1000 })}`,
+		preco: faker.commerce.price({ max: 1000 }),
+		descricao: faker.commerce.productDescription(),
+		quantidade: faker.number.int({ max: 1000 })
+	},
+	editarProduto: {
+		nome: `${faker.commerce.product()}${faker.number.int({ max: 1000 })}`,
+		preco: faker.commerce.price({ max: 1000 }),
+		descricao: faker.commerce.productDescription(),
+		quantidade: faker.number.int({ max: 1000 })
+	},
+	messagem: 'Registro alterado com sucesso'
+}
+
+const TC101 = {
+	idFake: 'AIADSLASDLK221',
+	tokenInvalido: 'TokenInvalido101',
+	message: 'Token de acesso ausente, inválido, expirado ou usuário do token não existe mais'
+}
+
+const TC102 = {
+	usuario: {
+		name: faker.person.firstName(),
+		email: faker.internet.email(),
+		password: faker.internet.password(),
+		administrador: 'false',
+	},
+	editarProduto: {
+		nome: `${faker.commerce.product()}${faker.number.int({ max: 1000 })}`,
+		preco: faker.commerce.price({ max: 1000 }),
+		descricao: faker.commerce.productDescription(),
+		quantidade: faker.number.int({ max: 1000 })
+	},
+	idFake: 'ASD2139ASD',
+	messagem: 'Rota exclusiva para administradores'
+}
+
 module.exports = {
-	TC070, TC071, TC072, TC073, TC080, TC081, TC082, TC083, TC090, TC091, TC092, TC093, TC094
+	TC070, TC071, TC072, TC073, TC080, TC081, TC082, TC083,
+	TC090, TC091, TC092, TC093, TC094, TC100, TC101, TC102 
 }
