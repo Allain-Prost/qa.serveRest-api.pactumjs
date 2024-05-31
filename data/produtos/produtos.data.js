@@ -261,7 +261,57 @@ const TC102 = {
 	messagem: 'Rota exclusiva para administradores'
 }
 
+const TC110 = {
+	cliente: {
+		name: faker.person.firstName(),
+		email: faker.internet.email(),
+		password: faker.internet.password(),
+		administrador: 'false',
+	},
+	adm: {
+		name: faker.person.firstName(),
+		email: faker.internet.email(),
+		password: faker.internet.password(),
+		administrador: 'true',
+	},
+	produto: {
+		nome: `${faker.commerce.product()}${faker.number.int({ max: 1000 })}`,
+		preco: faker.commerce.price({ max: 1000 }),
+		descricao: faker.commerce.productDescription(),
+		quantidade: faker.number.int({ max: 1000 })
+	},
+	cadastroCarrinho: {
+		message: 'Cadastro realizado com sucesso'
+	}
+}
+
+const TC120 = {
+	cliente: {
+		name: faker.person.firstName(),
+		email: faker.internet.email(),
+		password: faker.internet.password(),
+		administrador: 'false',
+	},
+	adm: {
+		name: faker.person.firstName(),
+		email: faker.internet.email(),
+		password: faker.internet.password(),
+		administrador: 'true',
+	},
+	produto: {
+		nome: `${faker.commerce.product()}${faker.number.int({ max: 1000 })}`,
+		preco: faker.commerce.price({ max: 1000 }),
+		descricao: faker.commerce.productDescription(),
+		quantidade: faker.number.int({ max: 1000 })
+	},
+	excluirCarrinho: {
+		message: 'Registro excluído com sucesso. Estoque dos produtos reabastecido'
+	}
+}
+
+
 module.exports = {
 	TC070, TC071, TC072, TC073, TC080, TC081, TC082, TC083,
-	TC090, TC091, TC092, TC093, TC094, TC100, TC101, TC102 
+	TC090, TC091, TC092, TC093, TC094, TC100, TC101, TC102, 
+	TC110, TC120
 }
