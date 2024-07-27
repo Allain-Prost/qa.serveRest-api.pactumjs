@@ -16,7 +16,7 @@ describe('Carrinho - Post', async () => {
     loginCliente = await postLogin({ email: TC120.cliente.email, password: TC120.cliente.password })
     produto = await postProdutos(loginAdm.json.authorization, TC120.produto.nome, TC120.produto.preco, TC120.produto.descricao, TC120.produto.quantidade)
     produtoMontado.push({ idProduto: produto.json._id, quantidade: 1})
-    carrinho = await postCarrinhos({authorization: loginCliente.json.authorization, produtos: produtoMontado})
+    await postCarrinhos({authorization: loginCliente.json.authorization, produtos: produtoMontado})
 })
 
   it('[TC-120] - Deve validar a exclusão de um carrinho através do token do cliente', async () => {
