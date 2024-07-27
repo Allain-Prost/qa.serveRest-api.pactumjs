@@ -8,7 +8,7 @@ const { TC120 } = require("../../../../data/produtos/produtos.data")
 
 describe('Carrinho - Post', async () => {
 
-  let loginAdm, loginCliente, produto, produtoMontado = [], carrinho
+  let loginAdm, loginCliente, produto, produtoMontado = []
   before('Deve realizar o cadastro de um administrador e de um cliente, deve realizar login de ambos os usuários; Deve cadastrar um produto e adicionar esse produto a um carrinho', async () => {
     await postUsuarios({ nome: TC120.adm.name, email: TC120.adm.email, password: TC120.adm.password, administrador: TC120.adm.administrador })
     await postUsuarios({ nome: TC120.cliente.name, email: TC120.cliente.email, password: TC120.cliente.password, administrador: TC120.cliente.administrador })
